@@ -6,12 +6,12 @@ Simple ruby script to parse web server log files. Returns the list of webpages w
 ## Installation
 
 ```ruby
-bundle install
+$ bundle install
 ```
 
 ## Usage
 ```
-./log_parser.rb [options] file
+$ ./log_parser.rb [options] file
 ```
 
 ## Options
@@ -39,7 +39,7 @@ You can get list of webpages:
 All views
 ```
 $ ./log_parser.rb spec/fixtures/webserver-full.log
-test/webserver.log
+spec/fixtures/webserver-full.log
   /about/2 90 views
   /contact 89 views
   /index 82 views
@@ -51,7 +51,7 @@ test/webserver.log
 Unique views
 ```
 $ ./log_parser.rb -s unique spec/fixtures/webserver-full.log
-test/webserver.log
+spec/fixtures/webserver-full.log
   /help_page/1 23 unique views
   /contact 23 unique views
   /home 23 unique views
