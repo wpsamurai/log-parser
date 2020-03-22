@@ -1,0 +1,9 @@
+Layout/IndentationConsistency:
+  Enabled: true
+  EnforcedStyle: indented_internal_methods
+
+Metrics/MethodLength:
+  Max: 99
+
+Layout/LineLength:
+  Max: 80
