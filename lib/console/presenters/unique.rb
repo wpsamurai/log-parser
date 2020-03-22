@@ -3,7 +3,7 @@
 module LogParser
   module Console
     module Presenters
-      class Default
+      class Unique
         def self.render(filename, result)
           new(filename, result).render
         end
@@ -16,8 +16,8 @@ module LogParser
         def render
           puts @filename
 
-          @result.sort_by{ |_k, v| -v[:all] }.each do |page|
-            puts "  #{page.first} #{page.last[:all]} views"
+          @result.sort_by{ |_k, v| -v[:unique] }.each do |page|
+            puts "  #{page.first} #{page.last[:unique]} unique views"
           end
 
           puts

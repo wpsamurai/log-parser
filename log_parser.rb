@@ -4,6 +4,7 @@
 require_relative 'lib/console/options'
 require_relative 'lib/console/presenter'
 require_relative 'lib/console/presenters/default'
+require_relative 'lib/console/presenters/unique'
 require_relative 'lib/parser'
 require_relative 'lib/parsers/basic'
 require_relative 'lib/reader'

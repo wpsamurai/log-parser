@@ -5,7 +5,11 @@ require 'optparse'
 module LogParser
   module Console
     class Options
-      DEFAULT_OPTIONS = { parser: :basic, reader: :memory, style: :default }
+      DEFAULT_OPTIONS = {
+        parser: :basic,
+        reader: :memory,
+        style: :default
+      }
 
       def self.parse(args)
         options = DEFAULT_OPTIONS

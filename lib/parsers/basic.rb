@@ -21,7 +21,7 @@ module LogParser
           process_line(line)
         end
 
-        @result.sort_by { |_k, v| -v }
+        @result
       end
 
       private
@@ -33,12 +33,19 @@ module LogParser
 
         def process_line(line)
           line = clean_line(line)
+          page_path = page_path(line)
+
+          @result[page_path] ||= {}
+
+          @result[page_path][:all] ||= 0
+          @result[page_path][:all] += 1
+
           line_hash = line_hash(line)
           return if @unique_requests[line_hash]
 
-          page_path = page_path(line)
-          @result[page_path] ||= 0
-          @result[page_path] += 1
+          @unique_requests[line_hash] = 1
+          @result[page_path][:unique] ||= 0
+          @result[page_path][:unique] += 1
         end
 
         def line_hash(line)
