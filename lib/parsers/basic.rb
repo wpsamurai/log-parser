@@ -18,7 +18,7 @@ module LogParser
         reset
 
         @reader.open.each do |line|
-          process_line(line)
+          process_line(line) unless clean_line(line).empty?
         end
 
         @result
