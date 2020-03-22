@@ -22,3 +22,15 @@ bundle install
 ```
 ./log_parser.rb webserver.log
 ```
+
+## Example
+```
+$ ./log_parser.rb test/webserver.log
+test/webserver.log
+  /about/2 90 unique views
+  /contact 89 unique views
+  /index 82 unique views
+  /about 81 unique views
+  /help_page/1 80 unique views
+  /home 78 unique views
+```
