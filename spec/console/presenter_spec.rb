@@ -1,6 +1,5 @@
 RSpec.describe LogParser::Console::Presenter do
   describe '.build' do
-
     context 'when the presenter class exists' do
       it 'returns presenter class with a module' do
         presenter_name = :default

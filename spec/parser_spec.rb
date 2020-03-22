@@ -1,6 +1,5 @@
 RSpec.describe LogParser::Parser do
   describe '.build' do
-
     context 'when the parser class exists' do
       it 'returns parser class with a module' do
         parser_name = :basic

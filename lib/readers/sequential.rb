@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Opens file and allow to read lines one by one
 module LogParser
   module Readers
     class Sequential

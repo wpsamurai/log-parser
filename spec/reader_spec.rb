@@ -1,6 +1,5 @@
 RSpec.describe LogParser::Reader do
   describe '.build' do
-
     context 'when the reader class exists' do
       it 'returns reader class with a module' do
         reader_name = :memory

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Loads all lines into memory
 module LogParser
   module Readers
     class Memory
