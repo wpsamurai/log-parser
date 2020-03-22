@@ -38,7 +38,7 @@ You can get list of webpages:
 ## Examples
 All views
 ```
-$ ./log_parser.rb test/webserver.log
+$ ./log_parser.rb spec/fixtures/webserver-full.log
 test/webserver.log
   /about/2 90 views
   /contact 89 views
@@ -50,7 +50,7 @@ test/webserver.log
 
 Unique views
 ```
-$ ./log_parser.rb -s unique test/webserver.log
+$ ./log_parser.rb -s unique spec/fixtures/webserver-full.log
 test/webserver.log
   /help_page/1 23 unique views
   /contact 23 unique views
